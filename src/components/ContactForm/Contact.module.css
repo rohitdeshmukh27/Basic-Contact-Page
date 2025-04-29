@@ -1,0 +1,188 @@
+.container {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.top_btn {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  background: #1a1a1a;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid #333;
+}
+
+.contact_form form {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+}
+
+.form_control {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  margin-top: 8px;
+}
+
+.form_control input {
+  height: 50px;
+  padding: 0 16px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: #242424;
+  color: #ffffff;
+}
+
+.form_control input:hover {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+.form_control input:focus {
+  border-color: #666;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1);
+  background: #2a2a2a;
+}
+
+.form_control label {
+  position: absolute;
+  top: -12px;
+  left: 12px;
+  background-color: #1a1a1a;
+  padding: 0 8px;
+  font-size: 14px;
+  color: #999;
+  transition: all 0.3s ease;
+}
+
+.form_control textarea {
+  height: 120px;
+  padding: 16px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  font-size: 16px;
+  resize: vertical;
+  transition: all 0.3s ease;
+  background: #242424;
+  color: #ffffff;
+}
+
+.form_control textarea:hover {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+.form_control textarea:focus {
+  border-color: #666;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1);
+  background: #2a2a2a;
+}
+
+.form_control:focus-within label {
+  color: #000;
+  font-weight: 500;
+}
+
+.displayname {
+  background: linear-gradient(to right, #1a1a1a, #242424);
+  padding: 24px;
+  border-radius: 12px;
+  margin-top: 32px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #333;
+  color: #fff;
+}
+
+.displayname:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  border-color: #444;
+}
+
+.displayname h1 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 16px;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+.displayname h1::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #333, #666);
+  transition: width 0.3s ease;
+}
+
+.displayname:hover h1::after {
+  width: 100%;
+}
+
+.displayname p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1rem;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.displayname p:hover {
+  background: white;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+  .displayname {
+    padding: 16px;
+    margin-top: 24px;
+  }
+
+  .displayname h1 {
+    font-size: 1.25rem;
+  }
+
+  .displayname p {
+    font-size: 0.875rem;
+    padding: 8px;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,75 @@
+.contact_section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact_section h1 {
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background: linear-gradient(45deg, #ffffff, #cccccc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 24px;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.contact_section h1:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(45deg, #000000, #2c2c2c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  letter-spacing: 2px;
+}
+
+.contact_section h1::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #1a1a1a, #404040);
+  transition: width 0.3s ease;
+}
+
+.contact_section h1:hover::after {
+  width: 180px;
+}
+
+.contact_section p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #999;
+  max-width: 800px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  padding: 20px;
+  border-radius: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.contact_section p:hover {
+  color: #ffffff;
+  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+@media (max-width: 768px) {
+  .contact_section h1 {
+    font-size: 36px;
+  }
+
+  .contact_section p {
+    font-size: 14px;
+    padding: 15px;
+  }
+}
